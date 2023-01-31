@@ -19,8 +19,8 @@
         x_v: 0,
         y_v: 0,
         jump : true,
-        height: 20,
-        width: 20
+        height: 10,
+        width: 10
         };
     // The status of the arrow keys
     var keys = {
@@ -32,17 +32,17 @@
     var gravity = 0.6;
     var friction = 0.7;
     // The number of platforms
-    var num = 2;
+    var num = 4;
     // The platforms
     var platforms = [];
     // Function to render the canvas
     function rendercanvas(){
-        ctx.fillStyle = "#F0F8FF";
+        ctx.fillStyle = "#666666";
         ctx.fillRect(0, 0, 600, 600);
     }
     // Function to render the player
     function renderplayer(){
-        ctx.fillStyle = "#F08080";
+        ctx.fillStyle = "#520b0b";
         ctx.fillRect((player.x)-20, (player.y)-20, player.width, player.height);
         }
     // Function to create platforms
@@ -63,6 +63,8 @@
         ctx.fillStyle = "#45597E";
         ctx.fillRect(platforms[0].x, platforms[0].y, platforms[0].width, platforms[0].height);
         ctx.fillRect(platforms[1].x, platforms[1].y, platforms[1].width,platforms[1]. height);
+        ctx.fillRect(platforms[2].x, platforms[2].y, platforms[2].width,platforms[2]. height);
+        ctx.fillRect(platforms[3].x, platforms[3].y, platforms[3].width,platforms[3]. height);
     
     }
     // This function will be called when a key on the keyboard is pressed
